@@ -61,8 +61,7 @@ const [showMobile , setShowMobile] = useState(false)
                                 </div>
                                 <div className="pragraph-area py-4">
                                    <p className="text-[#C4CFDE] font-mainFont">
-                                        Lorem ipsum dolor sit amet consectetur, 
-                                        adipisicing elit. Placeat, autem?
+                                         This is Rakib sheikh web developper 
                                      </p>
                                 </div>
                               {/* mobile-menu-area- start */}
