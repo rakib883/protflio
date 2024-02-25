@@ -9,27 +9,14 @@ import { delay, motion } from "framer-motion"
 import { useState } from 'react';
 
 const Foter = () => {
-    // const cvheader = [
-    //     {
-    //         name : "Education"
-    //     },
-    //     {
-    //         name : "Professional skill"
-    //     },
-    //     {
-    //         name : "Experience"
-    //     },
-    //     {
-    //         name : "Interview"
-    //     }
-    // ];
+    
     const [educaton,setEducation] = useState(true)
     const [skill,setSkill] = useState(false)
     const [myexperience,setMyExperience] = useState(false)
     const [interview,setInterview] = useState()
     const education = ()=>{
             setEducation(true)
-            skill(false)
+            setSkill(false)
             myexperience(false)
             interview(false)
     }
@@ -108,6 +95,29 @@ const Foter = () => {
             score : "90"
         },
     ]
+
+    const skillArea = [
+        {
+            name : "HTML",
+            score : "90%"
+        },
+        {
+            name : "CSS",
+            score : "90%"
+        },
+        {
+            name : "Javascprit",
+            score : "90%"
+        },
+        {
+            name : "Web design",
+            score : "90%"
+        },
+        {
+            name : "Web development",
+            score : "90%"
+        },
+    ]
     return (
         <div className="lg:mx-[60px] md:mx-[60px] ">
                 <div className="content">
@@ -137,7 +147,7 @@ const Foter = () => {
                             
                         
                             
-                            className="resume-content gap-10 grid lg:grid-cols-2 md:grid-cols-2 mt-10">
+                            className="resume-content gap-14 grid  lg:grid-cols-2 md:grid-cols-2 mt-10">
                             <div className="education">
                                 <div className="subtitle">
                                     <Subtitle className="font-mainFont" title="1998 - 2010 "></Subtitle>
@@ -176,9 +186,9 @@ const Foter = () => {
                  {/* education area end */}
 
                  {
-                    skill ? 
-                    <div className="professional-area mt-4">
-                       <div className="profesonal-content lg:flex md:flex justify-between ">
+                    skill && 
+                    <div className="professional-area mt-4 mx-2">
+                       <div className="profesonal-content gap-10   lg:flex md:flex justify-between ">
                           <div className="design-skill lg:w-1/2 w-full ">
                             <div className="title-area">
                                 <div className="subtitle">
@@ -190,17 +200,17 @@ const Foter = () => {
                             </div>
                             {/* photto shop area start */}
                             {
-                                progress.map(items => <div key={items.name} className="main overflow-hidden">
-                                        <div className="all-content my-4 ">
-                                            <div className="title mt-3">
+                                progress.map(items => <div key={items.name} className="main overflow-hidden my-6">
+                                        <div className="all-content mt-4">
+                                            <div className="title ">
                                                 <p className="text-[#979FAC] font-mainFont font-semibold uppercase text-[14px]">{items.skill}</p>
                                             </div>
-                                            <div className="progress-bars mt-2 relative">
-                                                <div className="parent-progress bg-black/20 w-full h-2 rounded-md"></div>
+                                            <div className="progress-bars  relative">
+                                                <div className="parent-progress bg-black/20 w-full h-2 mt-3 rounded-md"></div>
                                                 <motion.div 
                                                   initial = {{x:-10, opacity:0}}
                                                   animate ={{x:0, opacity:1}}
-                                                  transition={{delay:.3, duration:.1}}
+                                                  transition={{delay:.3, duration:1.1}}
                                                 className={`${" "} bg-gradient-to-r from-cyan-200 to-cyan-500 h-2 w-[90%] absolute top-0 rounded-md`}>
                                                     <span className="text-[#979FAC] right-0 bottom-4 absolute ">{items.score}%</span>
                                                 </motion.div>
@@ -211,11 +221,41 @@ const Foter = () => {
                                 </div> )
                             }
                             
-                             {/* photto shop area end */}
                           </div>
-                          <div className="development-skill w-1/2">development</div>
+                     {/* photto shop area end */}
+                     {/* skill decelopment area start */}
+                          <div className="development-skill w-full lg:w-1/2">
+                             <div className="development-title">
+                                <div className="sub-title">
+                                  <Subtitle className="uppercase font-mainFont " title="Fetures"></Subtitle>
+                                </div>
+                                <div className="main-title">
+                                    <h1 className="uppercase text-[30px] font-bold text-[#C4CFDE]">delopment skill</h1>
+                                </div>
+                             </div>
+                             <div className="development-skill-all-content w-full ">
+                                <div className="all-content w-full">
+                                   {
+                                     skillArea.map(items => 
+                                     <div key = {items.skill} className="all-skill-progress my-10">
+                                        <div className="content mt-4">
+                                            <p  className="text-[#979FAC]  font-mainFont w-full font-semibold uppercase text-[14px]">{items.name}</p>
+                                            <div className="progress-area w-full mt-3  relative">
+                                                <div className="main-bars  h-2 bg-black/20 rounded-md "></div>
+                                                <div className="child-progress bg-gradient-to-r from-sky-400 to-slate-400 h-2 w-[50%] top-0 rounded-md absolute">
+                                                  <span className="absolute bottom-4 right-0 text-[#979FAC]">{items.score}</span>
+                                                </div>
+                                                 
+                                            </div>
+                                        </div>
+                                     </div>)
+                                   } 
+                                </div>
+                             </div>
+                          </div>
+                        {/* skill decelopment area end */}
                        </div>
-                    </div> : ""
+                    </div>
                  }
                  
                  <motion.div
