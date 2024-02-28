@@ -108,7 +108,7 @@ const Foter = () => {
         },
         {
             name : "Javascprit",
-            score : 60
+            score : 90
         },
         {
             name : "Web design",
@@ -116,13 +116,11 @@ const Foter = () => {
         },
         {
             name : "Web development",
-            score : 40
+            score : 90
         },
     ]
     return (
-        <motion.div 
-         initial={{x:100, opacity:0}} animate={{x:0, opacity:1}} transition={{delay:.5, duration:.5}}
-        className="lg:mx-[60px] md:mx-[60px] ">
+        <div className="lg:mx-[60px] md:mx-[60px] ">
                 <div className="content">
                        {/* resume header area start */}
                             <div className="sub-title">
@@ -215,7 +213,7 @@ const Foter = () => {
                                                   animate ={{x:0, opacity:1}}
                                                   transition={{delay:.3, duration:1.1}}
                                                   
-                                                className={` bg-gradient-to-r from-cyan-200 to-cyan-500 h-2  absolute top-0 rounded-md`} style={{ width: `${items.score}%` }} >
+                                                className={`${'w-[90%]'} bg-gradient-to-r from-cyan-200 to-cyan-500 h-2  absolute top-0 rounded-md`}>
                                                     <span className="text-[#979FAC] right-0 bottom-4 absolute ">{items.score}%</span>
                                                 </motion.div>
                                                 
@@ -246,7 +244,7 @@ const Foter = () => {
                                             <p  className="text-[#979FAC]  font-mainFont w-full font-semibold uppercase text-[14px]">{items.name}</p>
                                             <div className="progress-area w-full mt-3  relative">
                                                 <div className="main-bars  h-2 bg-black/20 rounded-md "></div>
-                                                <div className={`child-progress bg-gradient-to-r from-sky-400 to-slate-400 h-2  top-0 rounded-md absolute`} style={{ width: `${items.score}%`}}>
+                                                <div className="child-progress bg-gradient-to-r from-sky-400 to-slate-400 h-2 w-[50%] top-0 rounded-md absolute">
                                                   <span className="absolute bottom-4 right-0 text-[#979FAC]">{items.score}%</span>
                                                 </div>
                                                  
@@ -273,7 +271,7 @@ const Foter = () => {
                  </div>
             </div>
             <Border></Border>
-        </motion.div>
+        </div>
     );
 };
 
