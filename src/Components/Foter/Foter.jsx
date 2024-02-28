@@ -104,19 +104,19 @@ const Foter = () => {
 
         {
             name : "CSS",
-            score : 90
+            score : 70
         },
         {
             name : "Javascprit",
-            score : 90
+            score : 50
         },
         {
             name : "Web design",
-            score : 90
+            score : 60
         },
         {
             name : "Web development",
-            score : 90
+            score : 40
         },
     ]
     return (
@@ -213,7 +213,7 @@ const Foter = () => {
                                                   animate ={{x:0, opacity:1}}
                                                   transition={{delay:.3, duration:1.1}}
                                                   
-                                                className={`${'w-[90%]'} bg-gradient-to-r from-cyan-200 to-cyan-500 h-2  absolute top-0 rounded-md`}>
+                                                className={` bg-gradient-to-r from-cyan-200 to-cyan-500 h-2  absolute top-0 rounded-md`} style={{width:`${items.score}%`}}>
                                                     <span className="text-[#979FAC] right-0 bottom-4 absolute ">{items.score}%</span>
                                                 </motion.div>
                                                 
@@ -244,7 +244,7 @@ const Foter = () => {
                                             <p  className="text-[#979FAC]  font-mainFont w-full font-semibold uppercase text-[14px]">{items.name}</p>
                                             <div className="progress-area w-full mt-3  relative">
                                                 <div className="main-bars  h-2 bg-black/20 rounded-md "></div>
-                                                <div className="child-progress bg-gradient-to-r from-sky-400 to-slate-400 h-2 w-[50%] top-0 rounded-md absolute">
+                                                <div className="child-progress bg-gradient-to-r from-sky-400 to-slate-400 h-2  top-0 rounded-md absolute" style={{width:`${items.score}%`}}>
                                                   <span className="absolute bottom-4 right-0 text-[#979FAC]">{items.score}%</span>
                                                 </div>
                                                  
