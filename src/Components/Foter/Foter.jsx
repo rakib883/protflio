@@ -76,54 +76,57 @@ const Foter = () => {
     const progress =[
         {
             skill : "phottoshop",
-            score : "80"
+            score : 80
         },
         {
             skill : "Figma",
-            score : "60"
+            score : 60
         },
         {
             skill : "Adobe XD",
-            score : "70"
+            score : 70
         },
         {
             skill : "illustrator",
-            score : "50"
+            score : 50
         },
         {
             skill : "design",
-            score : "90"
+            score : 90
         },
     ]
 
     const skillArea = [
         {
             name : "HTML",
-            score : "90%"
+            score : 90
         },
+
         {
             name : "CSS",
-            score : "90%"
+            score : 90
         },
         {
             name : "Javascprit",
-            score : "90%"
+            score : 60
         },
         {
             name : "Web design",
-            score : "90%"
+            score : 90
         },
         {
             name : "Web development",
-            score : "90%"
+            score : 40
         },
     ]
     return (
-        <div className="lg:mx-[60px] md:mx-[60px] ">
+        <motion.div 
+         initial={{x:100, opacity:0}} animate={{x:0, opacity:1}} transition={{delay:.5, duration:.5}}
+        className="lg:mx-[60px] md:mx-[60px] ">
                 <div className="content">
                        {/* resume header area start */}
                             <div className="sub-title">
-                                <Subtitle className="text-[13px] tracking-[3px] uppercase text-center" title = "7+ YEARS OF EXPERIENCE"></Subtitle>
+                                <Subtitle className="text-[13px] tracking-[3px] uppercase text-center" title = "I have no EXPERIENCE"></Subtitle>
                             </div>
                             <div className="main-title">
                                 <Maintitle className="text-center font-mainFont " title="My Resume"></Maintitle>
@@ -132,7 +135,7 @@ const Foter = () => {
                                 <div className=" custom-shadaw">
                                     <ul className="lg:flex lg:justify-between cursor-pointer ">
                                         <li onClick={education} className={`${educaton && 'text-[#FF014F]'} bg-gradient-to-r from-indigo-500/10  font-mainFont font-semibold text-[#C4CFDE] text-center  w-full py-6`}>Education</li>
-                                        <li onClick={profesonal} className="bg-gradient-to-r from-indigo-500/10   font-mainFont font-semibold text-[#C4CFDE] text-center w-full py-6">Professional Skill</li>
+                                        <li onClick={profesonal} className={`${skill && "text-[#FF014F] "}bg-gradient-to-r from-indigo-500/10   font-mainFont font-semibold text-[#C4CFDE] text-center w-full py-6`}>Professional Skill</li>
                                         <li className="bg-gradient-to-r from-indigo-500/10   font-mainFont font-semibold text-[#C4CFDE] text-center w-full py-6">Experience</li>
                                         <li className="bg-gradient-to-r from-indigo-500/10  font-mainFont font-semibold text-[#C4CFDE] text-center w-full py-6">Interview</li>
                                     </ul>
@@ -211,7 +214,8 @@ const Foter = () => {
                                                   initial = {{x:-10, opacity:0}}
                                                   animate ={{x:0, opacity:1}}
                                                   transition={{delay:.3, duration:1.1}}
-                                                className={`${" "} bg-gradient-to-r from-cyan-200 to-cyan-500 h-2 w-[90%] absolute top-0 rounded-md`}>
+                                                  
+                                                className={` bg-gradient-to-r from-cyan-200 to-cyan-500 h-2  absolute top-0 rounded-md`} style={{ width: `${items.score}%` }} >
                                                     <span className="text-[#979FAC] right-0 bottom-4 absolute ">{items.score}%</span>
                                                 </motion.div>
                                                 
@@ -242,8 +246,8 @@ const Foter = () => {
                                             <p  className="text-[#979FAC]  font-mainFont w-full font-semibold uppercase text-[14px]">{items.name}</p>
                                             <div className="progress-area w-full mt-3  relative">
                                                 <div className="main-bars  h-2 bg-black/20 rounded-md "></div>
-                                                <div className="child-progress bg-gradient-to-r from-sky-400 to-slate-400 h-2 w-[50%] top-0 rounded-md absolute">
-                                                  <span className="absolute bottom-4 right-0 text-[#979FAC]">{items.score}</span>
+                                                <div className={`child-progress bg-gradient-to-r from-sky-400 to-slate-400 h-2  top-0 rounded-md absolute`} style={{ width: `${items.score}%`}}>
+                                                  <span className="absolute bottom-4 right-0 text-[#979FAC]">{items.score}%</span>
                                                 </div>
                                                  
                                             </div>
@@ -262,14 +266,14 @@ const Foter = () => {
                   animate={{ y: 100 }}
                   transition={{ type: "spring", stiffness:0 }}
                  className="experience">
-                    <p>this is profesonal skill</p>
+                    <p></p>
                  </motion.div>
                  <div className="intervew-area">
-                    <p>interview area</p>
+                    <p></p>
                  </div>
             </div>
             <Border></Border>
-        </div>
+        </motion.div>
     );
 };
 
