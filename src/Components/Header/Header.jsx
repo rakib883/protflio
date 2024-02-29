@@ -28,11 +28,11 @@ const [showMobile , setShowMobile] = useState(false)
                  <div className="menu-area  flex items-center">
                     <div className="menu-items hidden  md:flex lg:flex">
                         {
-                           navitems.map(items =><HeaderLink
-                             key = {items.name}
-                             items = {items}
-                             showMobile = {showMobile}
-                           ></HeaderLink>) 
+                           navitems.map(items =>
+                             <div key={items.name} items ={items} className="menu">
+                                 <Link to={items.path} className="text-[#9BADB1] text-[14px] px-4 uppercase font-mainFont">{items.name}</Link>
+                             </div>
+                           ) 
                         }
                     </div>
                     <div className="button">
@@ -70,12 +70,12 @@ const [showMobile , setShowMobile] = useState(false)
                               </div>
                               <div className="mobile-menu flex flex-col gap-2 text-[#C0CAD9]">
                                 {
-                                    navitems.map(({name ,path}) =><Link
-                                    key = {path}
-                                    to = {path}
+                                    navitems.map(items =><Link
+                                    key = {items.path}
+                                    to = {items.path}
                                     onClick={() =>showMobile(false)}
-                                    >{name}</Link>)
-                                    
+                                    >{items.name}</Link>)
+                                  
                                 }
                               </div>
                               <div className="social-area">
