@@ -33,9 +33,9 @@ const Contact = () => {
                 uservalue,userphone,usergmail,usersub,usertext 
             }).then(res =>{
                if(res ?.status === 200){
-                 
-                 setSucess(true)
                  setLoading(false)
+                 setSucess(true)
+                 
                }else{
                 toast.success("wrong")
                }
@@ -82,9 +82,7 @@ const Contact = () => {
                      </div>
                 </div>
                 <div className="form md:col-span-2 lg:col-span-2  ">
-                   {
-                      !loading  &&  success && <h1 className="text-[green] text-[20px] flex h-full justify-center items-center">Thanks for feedback</h1>
-                    }
+                   
                   {
                     loading ? <h1 className="text-[green] text-[24px] h-full flex justify-center items-center">
                     Your message sending..............
@@ -124,7 +122,9 @@ const Contact = () => {
                         </div>
                     </div>
                     }
-                    
+                    {
+                      !loading  &&  success && <h1 className="text-[green] text-[20px] flex h-full justify-center items-center">Thanks for feedback</h1>
+                    }
                 </div>
             </div>
         </div>

@@ -70,11 +70,11 @@ const [showMobile , setShowMobile] = useState(false)
                               </div>
                               <div className="mobile-menu flex flex-col gap-2 text-[#C0CAD9]">
                                 {
-                                    navitems.map(({name ,path}) =><Link
+                                    navitems.map(({name ,path}) =><NavLink
                                     key = {path}
                                     to = {path}
                                     onClick={() =>showMobile(false)}
-                                    >{name}</Link>)
+                                    >{name}</NavLink>)
                                     
                                 }
                               </div>
