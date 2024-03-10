@@ -10,7 +10,7 @@ import Border from '../../All UI/Border';
 const Hero = () => {
 
     return (
-        <div className="main-area">
+        <section name="hero" className="main-area">
             <div className="all-content grid lg:grid-cols-2  lg:gap-2">
                 <div className="text-area  ">
                     <div className="all-text lg:mt-[100px]  flex flex-col lg:py-[40px] mt-10 md:gap-5">
@@ -71,7 +71,7 @@ const Hero = () => {
                 </div>
             </div>
             <Border></Border>
-        </div>
+        </section>
     );
 };
 

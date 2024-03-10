@@ -67,7 +67,7 @@ const Protflio = () => {
         },
     ]
     return (
-        <div className="main">
+        <section name="Protflio" className="main">
             <div className="sub-title">
                 <Subtitle className="uppercase text-center font-mainFont text-[14px]" title="visit my portfolio and keep your feedback visit"></Subtitle>
             </div>
@@ -85,7 +85,7 @@ const Protflio = () => {
                 </div>
             </div>
           <Border></Border>
-        </div>
+        </section>
     );
 };
 

@@ -120,7 +120,7 @@ const Foter = () => {
         },
     ]
     return (
-        <div className="lg:mx-[60px] md:mx-[60px] ">
+        <section name="resume" className="lg:mx-[60px] md:mx-[60px] ">
                 <div className="content">
                        {/* resume header area start */}
                             <div className="sub-title">
@@ -271,7 +271,7 @@ const Foter = () => {
                  </div>
             </div>
             <Border></Border>
-        </div>
+        </section>
     );
 };
 

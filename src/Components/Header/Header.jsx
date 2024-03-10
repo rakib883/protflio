@@ -1,36 +1,47 @@
 import React, { useState } from 'react';
 import logo from '../../../public/faby.png'
-import HeaderLink from './HeaderLink';
 import Button from '../../All UI/Button';
 import { HiMiniBars3 } from "react-icons/hi2";
 import { RxCross1 } from "react-icons/rx";
 import { motion } from "framer-motion"
 import Border from '../../All UI/Border';
-import { Link } from 'react-router-dom';
+import { Link,handleSetActive} from 'react-scroll';
 const Header = () => {
 const navitems = [
 
-    {name :"Home" , path : "/" },
-    {name :"About" , path : "/about" },
-    {name :"Contact" , path : "/Contact" },
-    {name :"Protflio" , path : "/Protflio" },
-    {name :"Resume" , path : "/resume" },
-]   
+    {name :"Home" , path : "hero" },
+    {name :"About" , path : "about" },
+    {name :"Protflio" , path : "Protflio" },
+    {name :"Contact" , path : "Contact" },
+    
+    
+]
+
+
 
 const [showMobile , setShowMobile] = useState(false)
 
     return (
-        <div className="bg-[#212428] z-50 sticky top-0">
+        <section  className="bg-[#212428] z-50 sticky top-0">
             <div className=" mx-[60px] py-2  all-foter-content lg:h-[100px] flex justify-between items-center">
                 <div className="logo-area">
                     <img className="lg:h-[60px]  md:h-[60px] md:w-[60px] h-[30px] w-[30px] border lg:w-[60px] rounded-full" src={logo} alt="" />
                 </div>
                  <div className="menu-area  flex items-center">
-                    <div className="menu-items hidden  md:flex lg:flex">
+                    <div className="menu-items hidden gap-6  md:flex lg:flex">
                         {
                            navitems.map(items =>
                              <div key={items.name} items ={items} className="menu">
-                                 <Link to={items.path} className="text-[#9BADB1] text-[14px] px-4 uppercase font-mainFont">{items.name}</Link>
+                                 <Link
+                                    activeClass="active" 
+                                    spy={true} 
+                                    smooth={true} 
+                                    offset={-10} 
+                                    duration={500} 
+                                    onSetActive={handleSetActive}
+                                 
+                                 
+                                 to={items.path} className="text-[#9BADB1] cursor-pointer text-[14px]  uppercase font-mainFont">{items.name}</Link>
                              </div>
                            ) 
                         }
@@ -68,24 +79,33 @@ const [showMobile , setShowMobile] = useState(false)
                               <div className="mobile-menu">
                                 <Border></Border>
                               </div>
-                              <div className="mobile-menu flex flex-col gap-2 text-[#C0CAD9]">
-                                {
-                                    navitems.map(items =><Link
-                                    key = {items.path}
-                                    to = {items.path}
-                                    onClick={() =>showMobile(false)}
-                                    >{items.name}</Link>)
-                                  
-                                }
+                              <div  className="mobile-menu flex flex-col gap-2 text-[#C0CAD9] cursor-pointer">
+                              {
+                               navitems.map(items =>
+                                <div  key={items.name} items ={items} className="menu">
+                                 <Link
+                                    
+                                    activeClass="active" 
+                                    spy={true} 
+                                    smooth={true} 
+                                    offset={-10} 
+                                    duration={500} 
+                                    onSetActive={handleSetActive}
+                                    
+                                  to={items.path} className="text-[#9BADB1] cursor-pointer text-[14px]  uppercase font-mainFont">{items.name}</Link>
+                             </div>
+                           ) 
+                        }
                               </div>
                               <div className="social-area">
                                 
                               </div>
                           </motion.div>
                     </div>
+                   
                 } 
             </div>
-        </div>
+        </section>
     );
 };
 
