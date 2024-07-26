@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
-
+import { FaCode } from "react-icons/fa";
 const ProtfulioLink = (props) => {
-    const {pic,topIcon,des,type,heart,arrow  } = props.items;
-    const [reactCounter , setReact] = useState(0)
-    const reactCount = () =>{
-        setReact(count => count + 1) 
-    }
+    const {pic,topIcon,des,type,heart,arrow,live,repo  } = props.items;
+   
     return (
         <div className="custom-shadaw rounded-lg  cursor-pointer">
-           <div className="image-area relative  m-6 overflow-hidden">
-              <img className="hover:scale-110 duration-300 cursor-pointer rounded-lg" src={pic} alt="" />
+           <div className="image-area relative  m-6 overflow-hidden max-h-52">
+               <a href={live}>
+                 <img className="hover:scale-y-125 duration-300 cursor-pointer rounded-lg" src={pic} alt="" />
+               </a>
                <div className="overlay-icon top-3  absolute right-3">
                   {topIcon }
                </div>
@@ -17,7 +15,11 @@ const ProtfulioLink = (props) => {
            <div className="all-ses mx-6 mt-2">
              <div className="icon mt-5 flex items-center justify-between">
                   <p className="text-[#CA0845]  uppercase">{type}</p>
-                  <button onClick={reactCount} className="hover:bg-[#131518] group text-[#C4CFDE] duration-300 px-2 py-1 rounded-sm flex items-center gap-1 justify-center"><p className="text-[#C4CFDE] group-hover:text-[#CA1630]">{heart}</p>{reactCounter }</button>
+                 <a href={repo}>
+                    <div className="code h-8 w-8 hover:bg-red-900 bg-red-700 flex justify-center items-center rounded-full">
+                        <FaCode className="text-white" />
+                    </div>
+                 </a>
               </div>
             
             <div className="title mt-2 group pb-4">

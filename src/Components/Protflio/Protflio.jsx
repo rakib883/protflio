@@ -1,12 +1,7 @@
-import React from 'react';
+
 import Subtitle from '../../All UI/Subtitle';
 import Maintitle from '../../All UI/Maintitle';
-import firstImage from '../../assets/portfolio-05.jpg'
-import secendimage from '../../assets/portfolio-06.jpg'
-import thirdimage from '../../assets/portfolio-large-01-800x600.jpg'
-import fourimage from '../../assets/portfolio-large-04-800x600.jpg'
-import fiveimage from '../../assets/portfolio-large-05-800x600.jpg'
-import siximage from '../../assets/portfolio-large-06-800x600.jpg'
+import firstImage from '../../assets/first.png'
 import { RiWindowsLine } from "react-icons/ri";
 import { CiHeart } from "react-icons/ci";
 import { MdArrowOutward } from "react-icons/md";
@@ -19,14 +14,18 @@ const Protflio = () => {
     const protflio =[
         {
             pic :firstImage,
+            live:"https://shop-z3aw-czbh67kso-rakib883s-projects.vercel.app/",
+            repo:"https://github.com/rakib883/protflio.git",
             topIcon : <RiWindowsLine className="w-5 h-5 font-bold text-[#3B3A47]" />,
-            type : "gallery",
+            type : "Shop",
             heart : <CiHeart className="text-[]"/>,
             des :" NFT Dashboard Application Development.",
             arrow : <MdArrowOutward />,
         },
         {
-            pic :secendimage,
+            pic :firstImage,
+            live:"https://vercel.com/rakib883s-projects/shop-z3aw/9wTh6Hng9iELT8AkFaCe8Fkm9zn4",
+            repo:"https://github.com/rakib883/protflio.git",
             topIcon :<MdOutlineVideocam className="w-5 h-5 text-[#3B3A47]"/>,
             type : "Video",
             heart : <CiHeart />,
@@ -34,7 +33,9 @@ const Protflio = () => {
             arrow : <MdArrowOutward />,
         },
         {
-            pic :thirdimage,
+            pic :firstImage,
+            live:"https://vercel.com/rakib883s-projects/shop-z3aw/9wTh6Hng9iELT8AkFaCe8Fkm9zn4",
+            repo:"https://github.com/rakib883/protflio.git",
             topIcon : <BsBoxArrowUpRight className="w-5 h-5 text-[#3B3A47]"/>,
             type : "External link",
             heart : <CiHeart />,
@@ -42,7 +43,9 @@ const Protflio = () => {
             arrow : <MdArrowOutward />,
         },
         {
-            pic :fourimage,
+            pic :firstImage,
+            live:"https://vercel.com/rakib883s-projects/shop-z3aw/9wTh6Hng9iELT8AkFaCe8Fkm9zn4",
+            repo:"https://github.com/rakib883/protflio.git",
             topIcon : <RiWindowsLine className="w-5 h-5 text-[#3B3A47]"/>,
             type : "game",
             heart : <CiHeart />,
@@ -50,7 +53,9 @@ const Protflio = () => {
             arrow : <MdArrowOutward />,
         },
         {
-            pic :fiveimage,
+            pic :firstImage,
+            live:"https://vercel.com/rakib883s-projects/shop-z3aw/9wTh6Hng9iELT8AkFaCe8Fkm9zn4",
+            repo:"https://github.com/rakib883/protflio.git",
             topIcon : <RiWindowsLine className="w-5 h-5 text-[#3B3A47]"/>,
             type : "Gallery",
             heart : <CiHeart />,
@@ -58,7 +63,9 @@ const Protflio = () => {
             arrow :<MdArrowOutward />,
         },
         {
-            pic :siximage,
+            pic :firstImage,
+            live:"https://vercel.com/rakib883s-projects/shop-z3aw/9wTh6Hng9iELT8AkFaCe8Fkm9zn4",
+            repo:"https://github.com/rakib883/protflio.git",
             topIcon : <RiWindowsLine className="w-5 h-5 text-[#3B3A47]"/>,
             type : "Stardant",
             heart : <CiHeart />,
