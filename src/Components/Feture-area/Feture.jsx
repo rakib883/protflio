@@ -33,12 +33,12 @@ const Feture = () => {
    ] 
     return (
         <div className="main">
-            <div className="feture-content md:leading-[25px] lg:leading-[50px] flex flex-col">
-                <div className="title">
-                    <Subtitle className="text-center lg:float-left text-[14px]" title="FEATURES"></Subtitle>
+            <div className="feture-content w-full md:leading-[25px] lg:leading-[50px] flex flex-col">
+                <div className="title text-center">
+                    <Subtitle className=" text-[14px]" title="FEATURES"></Subtitle>
                 </div>
-                <div className="main-title">
-                    <Maintitle className="text-center  lg:float-left"  title="what i do"></Maintitle>
+                <div className="main-title  text-center">
+                    <Maintitle className=""  title="what i do"></Maintitle>
                 </div>
             </div>
             <div className="feture-items grid lg:grid-cols-3 md:grid-cols-3 gap-4">

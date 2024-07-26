@@ -59,9 +59,9 @@ const Contact = () => {
                             <img className="hover:scale-125 w-full duration-300 rounded-lg cursor-pointer" src={contacImage } alt="" />
                         </div>
                         <div className="des-area mx-2 flex mt-4  flex-col gap-5">
-                           <h1 className="text-[29px] font-mainFont font-semibold text-[#C4CFDE]">Nevine Acotanza</h1>
-                           <p className="text-[18px] text-[#878E99] font-mainFont">Chief Operating Officer</p>
-                           <p className="text-[20px] font-mainFont text-[#878E99]">I am available for freelance work. Connect with me via and call in to my account</p>
+                           <h1 className="text-[29px] font-mainFont font-semibold text-[#C4CFDE]">Rakib Sheikh</h1>
+                           <p className="text-[18px] text-[#878E99] font-mainFont">Front-end Web developer</p>
+                           <p className="text-[20px] font-mainFont text-[#878E99]">I am available for <span className="text-green-600"><a href="https://www.linkedin.com/in/rakib883/">Linkdin</a></span>. Connect with me via and call in to my account</p>
                             <div className="phone-area text-[18px] font-mainFont text-[#878E99]">
                                 <p>Phone : <span className="text-[#C4CFDE]">01728262111</span> </p>
                                 <p>Email : <span className="text-[#C4CFDE]">sheikhrakib883@gmail.com</span> </p>
@@ -69,15 +69,15 @@ const Contact = () => {
                             <p className="uppercase text-[18px] font-mainFont text-[#878E99]">find with me</p>
                          </div>
                          <div className="social-area flex gap-4 mt-4 pb-5">
-                            <div className="face-book custom-shadaw p-2 hover:-translate-y-2 duration-300 cursor-pointer">
+                            <a href="https://www.facebook.com/mdrakibshik.rakib" className="face-book custom-shadaw p-2 hover:-translate-y-2 duration-300 cursor-pointer">
                                <FiFacebook className="h-9 w-9 text-[#C4CFDE] "/>
-                            </div>
+                            </a>
                             <div className="face-book custom-shadaw p-2 hover:-translate-y-2 duration-300 cursor-pointer">
                               <CiTwitter className="h-9 w-9 text-[#C4CFDE]"/>
                             </div>
-                            <div className="face-book custom-shadaw p-2 hover:-translate-y-2 duration-300 cursor-pointer">
+                            <a href="https://www.linkedin.com/in/rakib883/" className="face-book custom-shadaw p-2 hover:-translate-y-2 duration-300 cursor-pointer">
                               <FiLinkedin className="h-9 w-9 text-[#C4CFDE]"/>
-                            </div>
+                            </a>
                          </div>
                      </div>
                 </div>
