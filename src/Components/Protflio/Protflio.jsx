@@ -83,7 +83,7 @@ const Protflio = () => {
             <div className="main-title">
                 <Maintitle className="text-center uppercase font-sans" title="My Portfolio"></Maintitle>
             </div>
-            <div className="main-content mt-8">
+            <div className="main-content mt-8 mx-[10px]">
                 <div className="content grid grid-cols-1 md:lg:grid-cols-3 md:grid-cols-3 gap-5">
                    {
                     protflio.map(items =><ProtfulioLink
