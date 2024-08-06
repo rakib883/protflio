@@ -69,7 +69,7 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className="image-area md:justify-center mt-5  flex lg:justify-end">
-                    <img className="w-full h-full object-contain" src={logo} alt="" />
+                    <img className="w-full h-full mx-[10px] object-contain" src={logo} alt="" />
                 </div>
             </div>
             <Border></Border>
