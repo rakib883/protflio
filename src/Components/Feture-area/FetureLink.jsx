@@ -1,4 +1,4 @@
-import React from 'react';
+
 const FetureLink = (props) => {
     const {icon,name,des,downIcon} = props.items;
     return (

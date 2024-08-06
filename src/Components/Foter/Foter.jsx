@@ -98,22 +98,22 @@ const Foter = () => {
         },
     ]
     return (
-        <section name="resume" className="lg:mx-[60px] md:mx-[60px] ">
-                <div className="content">
+        <section name="resume" className=" ">
+                <div className="content mx-[10px]">
                        {/* resume header area start */}
                             <div className="sub-title">
                                 <Subtitle className="text-[13px] tracking-[3px] uppercase text-center" title = "I have no EXPERIENCE"></Subtitle>
                             </div>
                             <div className="main-title">
-                                <Maintitle className="text-center font-sans " title="My Resume"></Maintitle>
+                                <Maintitle className="text-center font-mainFont " title="My Resume"></Maintitle>
                             </div>
                         <div className="content-wriper custom-shadaw mt-8 rounded-lg">
                                 <div className=" custom-shadaw">
                                     <ul className="lg:flex lg:justify-between cursor-pointer ">
-                                        <li onClick={education} className={`${educaton && 'text-[#FF014F]'} bg-gradient-to-r from-indigo-500/10  font-sans font-semibold text-[#C4CFDE] text-center  w-full py-6`}>Education</li>
-                                        <li onClick={profesonal} className={`${skill && "text-[#FF014F] "}bg-gradient-to-r from-indigo-500/10   font-sans font-semibold text-[#C4CFDE] text-center w-full py-6`}>Professional Skill</li>
-                                        <li className="bg-gradient-to-r from-indigo-500/10   font-sans font-semibold text-[#C4CFDE] text-center w-full py-6">Experience</li>
-                                        <li className="bg-gradient-to-r from-indigo-500/10  font-sans font-semibold text-[#C4CFDE] text-center w-full py-6">Interview</li>
+                                        <li onClick={education} className={`${educaton && 'text-[#FF014F]'} bg-gradient-to-r from-indigo-500/10  font-mainFont font-semibold text-[#C4CFDE] text-center  w-full py-6`}>Education</li>
+                                        <li onClick={profesonal} className={`${skill && "text-[#FF014F] "}bg-gradient-to-r from-indigo-500/10   font-mainFont font-semibold text-[#C4CFDE] text-center w-full py-6`}>Professional Skill</li>
+                                        <li className="bg-gradient-to-r from-indigo-500/10   font-mainFont font-semibold text-[#C4CFDE] text-center w-full py-6">Experience</li>
+                                        <li className="bg-gradient-to-r from-indigo-500/10  font-mainFont font-semibold text-[#C4CFDE] text-center w-full py-6">Interview</li>
                                     </ul>
                                 </div>
                         </div>
@@ -127,12 +127,12 @@ const Foter = () => {
                         
                             
                             className="resume-content gap-14 grid  lg:grid-cols-2 md:grid-cols-2 mt-10">
-                            <div className="education">
+                            <div className="education mx-[10px]">
                                 <div className="subtitle">
-                                    <Subtitle className="font-sans" title="1998 - 2010 "></Subtitle>
+                                    <Subtitle className="font-mainFont" title="1998 - 2010 "></Subtitle>
                                 </div>
                                 <div className="main-title">
-                                    <h1 className="lg:text-[30px] font-sans font-bold md:text-[30px] text-[18px] text-[#C4CFDE]">Education Quality</h1>
+                                    <h1 className="lg:text-[30px] font-mainFont font-bold md:text-[30px] text-[18px] text-[#C4CFDE]">Education Quality</h1>
                                 </div>
                                 <div className="esucation-content flex flex-col gap-8">
                                     {
@@ -143,12 +143,12 @@ const Foter = () => {
                                     }
                                 </div>
                             </div>
-                            <div className="job-experience ">
-                                <div className="subtitle">
-                                        <Subtitle className="font-sans" title="2024-start study" ></Subtitle>
+                            <div className="job-experience mx-[10px] ">
+                                     <div className="subtitle ">
+                                        <Subtitle className="font-mainFont" title="2024-start study" ></Subtitle>
                                     </div>
                                     <div className="main-title">
-                                        <h1 className="lg:text-[30px] font-sans font-bold md:text-[30px] text-[18px] text-[#C4CFDE]">Job Experience</h1>
+                                        <h1 className="lg:text-[30px] font-mainFont font-bold md:text-[30px] text-[18px] text-[#C4CFDE]">Job Experience</h1>
                                     </div>
                                     <div className="experience-content flex flex-col gap-12 mt-6">
                                         {
@@ -171,7 +171,7 @@ const Foter = () => {
                           <div className="design-skill lg:w-1/2 w-full ">
                             <div className="title-area">
                                 <div className="subtitle">
-                                    <Subtitle className="uppercase font-sans " title="Fetures"></Subtitle>
+                                    <Subtitle className="uppercase font-mainFont " title="Fetures"></Subtitle>
                                 </div>
                                 <div className="main-title">
                                     <h1 className="uppercase text-[30px] font-bold text-[#C4CFDE]">Design Skill</h1>
@@ -182,7 +182,7 @@ const Foter = () => {
                                 progress.map(items => <div key={items.name} className="main overflow-hidden my-6">
                                         <div className="all-content mt-4">
                                             <div className="title ">
-                                                <p className="text-[#979FAC] font-sans font-semibold uppercase text-[14px]">{items.skill}</p>
+                                                <p className="text-[#979FAC] font-mainFont font-semibold uppercase text-[14px]">{items.skill}</p>
                                             </div>
                                             <div className="progress-bars  relative">
                                                 <div className="parent-progress bg-black/20 w-full h-2 mt-3 rounded-md"></div>
@@ -207,7 +207,7 @@ const Foter = () => {
                           <div className="development-skill w-full lg:w-1/2">
                              <div className="development-title">
                                 <div className="sub-title">
-                                  <Subtitle className="uppercase font-sans " title="Fetures"></Subtitle>
+                                  <Subtitle className="uppercase font-mainFont " title="Fetures"></Subtitle>
                                 </div>
                                 <div className="main-title">
                                     <h1 className="uppercase text-[30px] font-bold text-[#C4CFDE]">delopment skill</h1>
@@ -219,7 +219,7 @@ const Foter = () => {
                                      skillArea.map(items => 
                                      <div key = {items.skill} className="all-skill-progress my-10">
                                         <div className="content mt-4">
-                                            <p  className="text-[#979FAC]  font-sans w-full font-semibold uppercase text-[14px]">{items.name}</p>
+                                            <p  className="text-[#979FAC]  font-mainFont w-full font-semibold uppercase text-[14px]">{items.name}</p>
                                             <div className="progress-area w-full mt-3  relative">
                                                 <div className="main-bars  h-2 bg-black/20 rounded-md "></div>
                                                 <div className="child-progress bg-gradient-to-r from-sky-400 to-slate-400 h-2  top-0 rounded-md absolute" style={{width:`${items.score}%`}}>
