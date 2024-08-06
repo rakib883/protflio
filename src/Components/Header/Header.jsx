@@ -25,8 +25,8 @@ const [showMobile , setShowMobile] = useState(false)
 
     return (
         <section  className="bg-[#212428] z-50 sticky top-0 shadow-2xl">
-            <div className=" mx-[60px] py-2  all-foter-content lg:h-[100px] flex justify-between items-center">
-                <div className="logo-area lg:h-[60px]  rounded-full overflow-hidden  md:h-[60px] md:w-[60px] h-[30px] w-[30px] border lg:w-[60px]">
+            <div className=" mx-[10px] md:mx-[60px] py-2  all-foter-content lg:h-[100px] flex justify-between items-center">
+                <div className="logo-area lg:h-[60px]  rounded-full overflow-hidden  md:h-[60px] md:w-[60px] h-[40px] w-[40px] border lg:w-[60px]">
                     <img className="w-full h-full object-contain" src={logo} alt="" />
                 </div>
                  <div className="menu-area  flex items-center">
