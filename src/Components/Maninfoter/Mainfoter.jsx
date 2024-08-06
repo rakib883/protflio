@@ -26,7 +26,7 @@ const Mainfoter = () => {
                    </div>
                    <div className="quick-link">
                      <div className="items">
-                        <h1 className="uppercase text-[18px] font-mainFont  text-[#FF014F]">Quick link</h1>
+                        <h1 className="uppercase text-[18px] font-sans  text-[#FF014F]">Quick link</h1>
                         <ul className="text-[#C4CFDE] text-[16px] mt-4">
                             <li className="mb-2 cursor-pointer text-[18px] relative custom-li overflow-hidden"><span className="custom-design inline-block">Authentication</span></li>   
                             <li className="mb-2 cursor-pointer text-[18px] relative custom-li overflow-hidden"><span className="custom-design inline-block">System Status</span></li>
@@ -38,7 +38,7 @@ const Mainfoter = () => {
                    </div>
                    <div className="resurce">
                    <div className="items">
-                        <h1 className="uppercase text-[18px] font-mainFont  text-[#FF014F]">RESOURCES</h1>
+                        <h1 className="uppercase text-[18px] font-sans  text-[#FF014F]">RESOURCES</h1>
                         <ul className="text-[#C4CFDE] text-[16px] mt-4">
                             <li className="mb-2 cursor-pointer text-[18px] relative custom-li overflow-hidden"><span className="custom-design inline-block">Documentation</span></li>   
                             <li className="mb-2 cursor-pointer text-[18px] relative custom-li overflow-hidden"><span className="custom-design inline-block">Authentication</span></li>
@@ -50,7 +50,7 @@ const Mainfoter = () => {
                    </div>
                    <div className="developpper">
                    <div className="items">
-                        <h1 className="uppercase text-[18px] font-mainFont  text-[#FF014F]">DEVELOPERS</h1>
+                        <h1 className="uppercase text-[18px] font-sans  text-[#FF014F]">DEVELOPERS</h1>
                         <ul className="text-[#C4CFDE] text-[16px] mt-4">
                             <li className="mb-2 cursor-pointer text-[18px] relative custom-li overflow-hidden"><span className="custom-design inline-block">About</span></li>   
                             <li className="mb-2 cursor-pointer text-[18px] relative custom-li overflow-hidden"><span className="custom-design inline-block">Portfolio</span></li>

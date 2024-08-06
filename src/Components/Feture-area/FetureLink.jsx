@@ -10,10 +10,10 @@ const FetureLink = (props) => {
                            <div className="itens">
                                 <div className="icon">{icon}</div>
                             </div>
-                            <div className="name group-hover:text-[#ffff] py-5 text-[24px] font-mainFont text-[#C4CFDE]">
+                            <div className="name group-hover:text-[#ffff] py-5 text-[24px] font-sans text-[#C4CFDE]">
                                 {name}
                             </div>
-                            <div className="des group-hover:text-[#ffff] text-[16px]  font-mainFont text-[#C4CFDE] ">
+                            <div className="des group-hover:text-[#ffff] text-[16px]  font-sans text-[#C4CFDE] ">
                                 {des}
                             </div>
                             <div className="down-icon mt-5">

@@ -23,7 +23,7 @@ const ProtfulioLink = (props) => {
               </div>
             
             <div className="title mt-2 group pb-4">
-                <h1 className="text-[24px] font-mainFont text-[#C4CFDE] relative overflow-hidden hover:text-[#FF014F] duration-300 ">{des} <span className="absolute bottom-[3px] translate-y-6 group-hover:translate-x-1 -translate-x-6 group-hover:-translate-y-1 duration-300 ml-2">{arrow}</span>  </h1>
+                <h1 className="text-[24px] font-sans text-[#C4CFDE] relative overflow-hidden hover:text-[#FF014F] duration-300 ">{des} <span className="absolute bottom-[3px] translate-y-6 group-hover:translate-x-1 -translate-x-6 group-hover:-translate-y-1 duration-300 ml-2">{arrow}</span>  </h1>
             </div>
            </div>
         </div>

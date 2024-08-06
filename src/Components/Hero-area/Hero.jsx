@@ -7,16 +7,15 @@ import { LiaInvision } from "react-icons/lia";
 import { PiSketchLogo } from "react-icons/pi";
 import { TbBrandFigma } from "react-icons/tb";
 import Border from '../../All UI/Border';
-import { Link } from 'react-scroll';
 const Hero = () => {
 
     return (
         <section name="hero" className="main-area">
-            <div className="all-content grid lg:grid-cols-2  lg:gap-2">
-                <div className="text-area  ">
+            <div className="all-content grid lg:grid-cols-2 items-center  lg:gap-2">
+                <div className="text-area text-center lg:text-start">
                     <div className="all-text lg:mt-[100px]  flex flex-col lg:py-[40px] mt-10 md:gap-5">
-                        <p className="text-[#C4CFDE] font-mainFont   text-[14px] tracking-[3px]">WELCOME TO MY WORLD</p>
-                        <h1 className="lg:text-[60px] text-[20px] text-[#FFFFFF] lg:leading-[70px]  font-bold">Hi, I'AM <span className="text-[#FF014F]">Rakib SHEIKH</span></h1>
+                        <p className="text-[#C4CFDE] font-sans   text-[14px] tracking-[3px]">WELCOME TO MY WORLD</p>
+                        <h1 className="lg:text-[40px] text-[20px] text-[#FFFFFF] lg:leading-[70px]  font-bold">Hi, I'AM <span className="text-[#FF014F]">Rakib SHEIKH</span></h1>
                          <p className="lg:text-[60px] md:text-[60px] text-[20px] text-[#FFFFFF] leading-[70px]  font-bold">   
                            <Typewriter
                                 words={['developer', 'React js developer', "Next.js developer" ,'And hard problem solver']}
@@ -37,10 +36,10 @@ const Hero = () => {
                          </p>
                     </div>
                     <div className="social-area grid lg:grid-cols-2  md:grid-cols-2 lg:mt-40 gap-10">
-                        <div className="find-with-me  w-full">
+                        <div className="find-with-me text-center  w-full">
                             <div className="title">
-                                <p className="text-[14px] font-mainFont uppercase text-[#C4CFDE] tracking-[2px]">find with me</p>
-                                 <div className="main-area mt-4 flex gap-4">
+                                <p className="text-[14px] font-sans text-center md:text-start uppercase text-[#C4CFDE] tracking-[2px]">find with me</p>
+                                 <div className="main-area mt-4 flex justify-center md:justify-start items-center gap-4">
                                     <a href="https://www.facebook.com/mdrakibshik.rakib" className="flex  justify-center p-4 items-center hover:bg-[#1A1C20] hover:-translate-y-1 duration-300 custom-shadaw w-[60px] h-[60px]">
                                         <FiFacebook className="text-[#C4CFDE] hover:bg-[#1A1C20]   h-[30px] w-[30px] rounded cursor-pointer" />
                                     </a>
@@ -54,8 +53,8 @@ const Hero = () => {
                             </div>
                         </div>
                         <div className="my-skill w-full">
-                          <p className="text-[14px] font-mainFont uppercase text-[#C4CFDE] tracking-[2px]">best skill on</p>
-                          <div className="main-area mt-4 flex gap-4">
+                          <p className="text-[14px] font-sans uppercase text-[#C4CFDE] text-center md:text-start tracking-[2px]">best skill on</p>
+                          <div className="main-area mt-4 flex md:justify-start justify-center gap-4">
                                     <div className="flex justify-center p-4 items-center hover:bg-[#1A1C20] hover:-translate-y-1 duration-300 custom-shadaw w-[60px] h-[60px]">
                                         <LiaInvision  className="text-[#C4CFDE] hover:bg-[#1A1C20]   h-[30px] w-[30px] rounded cursor-pointer" />
                                     </div>
@@ -70,7 +69,7 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className="image-area md:justify-center mt-5  flex lg:justify-end">
-                    <img className="w-full" src={logo} alt="" />
+                    <img className="w-full h-full object-contain" src={logo} alt="" />
                 </div>
             </div>
             <Border></Border>

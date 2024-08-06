@@ -16,7 +16,7 @@ const Protflio = () => {
     const protflio =[
         {
             pic :firstImage,
-            live:"https://shop-z3aw-czbh67kso-rakib883s-projects.vercel.app/",
+            live:"https://shop-z3aw.vercel.app/",
             repo:"https://github.com/rakib883/protflio.git",
             topIcon : <RiWindowsLine className="w-5 h-5 font-bold text-[#3B3A47]" />,
             type : "Shop",
@@ -78,10 +78,10 @@ const Protflio = () => {
     return (
         <section name="Protflio" className="main">
             <div className="sub-title">
-                <Subtitle className="uppercase text-center font-mainFont text-[14px]" title="visit my portfolio and keep your feedback visit"></Subtitle>
+                <Subtitle className="uppercase text-center font-sans text-[14px]" title="visit my portfolio and keep your feedback visit"></Subtitle>
             </div>
             <div className="main-title">
-                <Maintitle className="text-center uppercase font-mainFont" title="My Portfolio"></Maintitle>
+                <Maintitle className="text-center uppercase font-sans" title="My Portfolio"></Maintitle>
             </div>
             <div className="main-content mt-8">
                 <div className="content grid grid-cols-1 md:lg:grid-cols-3 md:grid-cols-3 gap-5">
