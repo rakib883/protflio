@@ -8,9 +8,8 @@ import {
 import Home from './Page/Home.jsx';
 import App from './App.jsx';
 import Error from './Components/Error/Error.jsx';
-import Foter from './Components/Foter/Foter.jsx';
-import Protflio from './Components/Protflio/Protflio.jsx';
 import Contact from './Components/Contact/Contact.jsx';
+import Protflio from './Components/RecentWork/Protflio.jsx';
 
 const router = createBrowserRouter([
   {
@@ -27,12 +26,7 @@ const router = createBrowserRouter([
       },
       {
          path : "Protflio",
-         element : <Protflio></Protflio>
-      },
-      {
-        path : "Resume",
-        element : <Foter></Foter>
-        
+         element : <Protflio/>
       },
       {
         path : "*",

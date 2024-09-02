@@ -1,22 +1,23 @@
-import React from 'react';
+
 import Hero from '../Components/Hero-area/Hero';
-import Feture from '../Components/Feture-area/Feture';
-import Protflio from '../Components/Protflio/Protflio';
-import Foter from '../Components/Foter/Foter';
+import Protflio from '../Components/RecentWork/Protflio';
+import About from '../Components/Qulity/About';
+import Education from '../Components/Education/Education';
+import Skill from '../Components/MySkill/Skill';
 import Contact from '../Components/Contact/Contact';
-import About from '../Components/About area/About';
 
 
 const Home = () => {
     return (
         <div className="all-content">
-            <div className="lg:mx-[60px] mx-[1px]">
+            <div className="">
                 <Hero></Hero>
                 <About></About>
-                <Feture></Feture>
                 <Protflio></Protflio>
-                <Foter></Foter>
+                <Education></Education>
+                <Skill></Skill>
                 <Contact></Contact>
+               
             </div>
         </div>
     );

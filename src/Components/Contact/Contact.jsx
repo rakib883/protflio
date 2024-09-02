@@ -1,135 +1,85 @@
-import React, { useState } from 'react';
-import contacImage from '../../assets/contact1.png'
-import Subtitle from '../../All UI/Subtitle';
-import Maintitle from '../../All UI/Maintitle';
-import { FiFacebook } from "react-icons/fi";
-import { CiTwitter } from "react-icons/ci";
-import { FiLinkedin } from "react-icons/fi";
-import  toast, { Toaster } from 'react-hot-toast';
-import axios, {isCancel, AxiosError} from 'axios';
+import Title from "../../All UI/Title"
+import { BiPhoneCall } from "react-icons/bi";
+import { SiGmail } from "react-icons/si";
+import { FaLocationDot } from "react-icons/fa6";
+import { motion } from "framer-motion"
 
 const Contact = () => {
-    const [uservalue , setUservalue] = useState("");
-    const [userphone,setUserphone] = useState("");
-    const [usergmail , setUserGmail] = useState("")
-    const [usersub,setuseSubject] = useState("");
-    const [usertext , setUsertext] =  useState("");
-    const [loading , setLoading] = useState(false);
-    const submitHandeler = ()=>{
-        if(uservalue === ""){
-            toast.error("inter your name")   
-        }else if(userphone === ""){
-            toast.error("Inter your phone")
-        }else if(usergmail === ""){
-            toast.error("Inter your gmail")
-        }else if(usersub === ""){
-            toast.error("inter your gmail")
-        }else if(usertext === ""){
-            toast.error("inter your text")
-        }else{
-            setLoading(true)
-            axios.post("https://getform.io/f/5eV4BWbE", {
-                uservalue,userphone,usergmail,usersub,usertext 
-            }).then(res =>{
-               if(res ?.status === 200){
-                 setLoading(false)
-                 setUservalue("")
-                setUserphone("")
-                setUserGmail("")
-                setuseSubject("")
-                setUsertext("")
-                setLoading("")
-                 
-               }else{
-                toast.success("wrong")
-               }
-            })
-        }
-    }
-    return (
-        <section name="Contact" className="main-area ">
-            <div className="title">
-                <div className="subtitle">
-                    <Subtitle className="text-center" title="CONTACT"></Subtitle>
-                </div>
-                <div className="main-title pb-4 ">
-                    <Maintitle className="text-center text-[13px] " title="Contact With Me"></Maintitle>
-                </div>
-            </div>
-            <div className="all-content grid md:grid-cols-3 lg:grid-cols-3 gap-4 justify-center  ">
-                <div className="">
-                     <div className="custom-shadaw p-4 rounded-lg">
-                        <div className="overflow-hidden  rounded-lg">
-                            <img className="hover:scale-125 w-full duration-300 rounded-lg cursor-pointer" src={contacImage } alt="" />
+  return (
+    <div className=" bg-[#f6f3fc]">
+        <div className="content mx-4 md:flex items-center gap-8 py-20">
+            <div className="contact w-full md:w-[50%] bg-white rounded-xl">
+                <motion.div 
+                 initial={{x:-50,opacity:0}}
+                 whileInView={{x:0,opacity:1,transition:{duration:2}}}
+                className="content p-8">
+                    <div className="title">
+                        <Title title="Let’s work together!" />
+                        <p>
+                          I design and code beautifully simple things and i love what i do. Just simple like that!
+                        </p>
+                    </div>
+                    <div className="form-area mt-8 flex flex-col gap-4">
+                        <div className="name-area flex gap-4">
+                            <input className=" outline-none border-[1px] py-3 px-4 w-full rounded-md bg-[#f6f3fc] border-[#a095b5]" type="text" placeholder="First Name " />
+                            <input className=" outline-none border-[1px] py-3 px-4 w-full rounded-md bg-[#f6f3fc] border-[#a095b5]" type="text" placeholder="Last Name " />
                         </div>
-                        <div className="des-area mx-2 flex mt-4  flex-col gap-5">
-                           <h1 className="text-[29px] font-sans font-semibold text-[#C4CFDE]">Rakib Sheikh</h1>
-                           <p className="text-[18px] text-[#878E99] font-sans">Front-end Web developer</p>
-                           <p className="text-[20px] font-sans text-[#878E99]">I am available for <span className="text-green-600"><a href="https://www.linkedin.com/in/rakib883/">Linkdin</a></span>. Connect with me via and call in to my account</p>
-                            <div className="phone-area text-[18px] font-sans text-[#878E99]">
-                                <p>Phone : <span className="text-[#C4CFDE]">01728262111</span> </p>
-                                <p>Email : <span className="text-[#C4CFDE]">sheikhrakib883@gmail.com</span> </p>
-                            </div>
-                            <p className="uppercase text-[18px] font-sans text-[#878E99]">find with me</p>
-                         </div>
-                         <div className="social-area flex gap-4 mt-4 pb-5">
-                            <a href="https://www.facebook.com/mdrakibshik.rakib" className="face-book custom-shadaw p-2 hover:-translate-y-2 duration-300 cursor-pointer">
-                               <FiFacebook className="h-9 w-9 text-[#C4CFDE] "/>
-                            </a>
-                            <div className="face-book custom-shadaw p-2 hover:-translate-y-2 duration-300 cursor-pointer">
-                              <CiTwitter className="h-9 w-9 text-[#C4CFDE]"/>
-                            </div>
-                            <a href="https://www.linkedin.com/in/rakib883/" className="face-book custom-shadaw p-2 hover:-translate-y-2 duration-300 cursor-pointer">
-                              <FiLinkedin className="h-9 w-9 text-[#C4CFDE]"/>
-                            </a>
-                         </div>
-                     </div>
-                </div>
-                <div className="form md:col-span-2 lg:col-span-2  ">
-                   
-                  {
-                    loading ? <h1 className="text-[green] text-[24px] h-full flex justify-center items-center">
-                    Your message sending..............
-                            </h1>  :         
-                    <div className="all-content custom-shadaw mt-3">
-                        <div className="all-content mx-10">
-                            <div className="phone-and-name-area flex justify-between gap-4">
-                                <div className="phone w-full">
-                                    <p className="text-[16px] uppercase text-[#C4CFDE]">Inter your name</p>
-                                 <input onChange={(e) =>setUservalue(e.target.value)} value={uservalue}  className="bg-[#191B1E] border-2  mt-1  text-[#C4CFDE] rounded-sm font-sans outline-none border-[black] focus-within:border-[#E11D48] duration-300 py-3 w-full px-2" placeholder="Inter your name" type="text" />
-                                </div>
-                                <div className="name-area w-full">
-                                    <p className="text-[16px] uppercase text-[#C4CFDE]">Inter your number</p>
-                                    <input type="number" onChange={(e) =>setUserphone(e.target.value)} maxLength={11} value={userphone}  className="bg-[#191B1E] border-2 mt-1  text-[#C4CFDE] rounded-sm font-sans outline-none border-[black] focus-within:border-[#E11D48] duration-300 py-3 w-full px-2" placeholder="Inter your number"  /> 
-                                </div>
-                            </div>
-                            <div className="mt-4">
-                                <div className="name-area w-full">
-                                    <p className="text-[16px] uppercase text-[#C4CFDE]">Inter your Gmail</p>
-                                    <input onChange={(e) =>setUserGmail(e.target.value)}  value={usergmail}  className="bg-[#191B1E] border-2 mt-1  text-[#C4CFDE] rounded-sm font-sans outline-none border-[black] focus-within:border-[#E11D48] duration-300 py-3 w-full px-2" placeholder="Inter your number" type="email"  /> 
-                                </div>
-                            </div>
-                            <div className=" mt-4">
-                                <div className="name-area w-full">
-                                    <p className="text-[16px] uppercase text-[#C4CFDE]">Inter your subject</p>
-                                    <input onChange={(e) =>setuseSubject(e.target.value)} value={usersub}   className="bg-[#191B1E] border-2 mt-1 text-[#C4CFDE] rounded-sm font-sans outline-none border-[black] focus-within:border-[#E11D48] duration-300 py-3 w-full px-2" placeholder="Inter your subject" type="text" /> 
-                                </div>
-                                <div className="mt-4">
-                                <div className="name-area w-full">
-                                    <p className="text-[16px] uppercase text-[#C4CFDE]">Inter your message</p>
-                                    <textarea onChange={(e) =>setUsertext(e.target.value)} value={usertext} className="w-full bg-[#191B1E] border-2 border-[black] focus-within:border-[#E11D48] mt-1  text-[#C4CFDE] rounded-sm font-sans outline-none  duration-300 py-3 px-2" placeholder="Inter your subject" name="" id="" cols="" rows="10"></textarea>
-                                </div>
-                                <button onClick={submitHandeler} className="text-center border border-[black] duration-300 w-full text-[white] focus-within:border-[#E11D48] py-2 cursor-pointer mt-5 uppercase font-sans bg-[#212428]">Send message</button>
-                                <Toaster />
-                            </div>
-                            </div>
+                        <div className="name-area flex gap-4">
+                            <input className=" outline-none border-[1px] py-3 px-4 w-full rounded-md bg-[#f6f3fc] border-[#a095b5]" type="text" placeholder="Email address " />
+                            <input className=" outline-none border-[1px] py-3 px-4 w-full rounded-md bg-[#f6f3fc] border-[#a095b5]" type="text" placeholder="Phone Number " />
+                        </div>
+                        <div className="name-area gap-4">
+                            <select className=" outline-none cursor-pointer border-[1px] py-3 px-4 w-full rounded-md bg-[#f6f3fc] border-[#a095b5]" name="" id="">
+                                <option value="">--Please Choose another option--</option>
+                                <option value="">Web Design</option>
+                                <option value="">App Design</option>
+                                <option value="">ARP Design</option>
+                            </select>
+                        </div>
+                        <div className="text-area">
+                            <textarea className=" outline-none border-[1px] py-3 px-4 w-full rounded-md bg-[#f6f3fc] border-[#a095b5]" placeholder="Text your message" name="" id=""></textarea>
+                        </div>
+                        <button className=" px-6 py-3 bg-gradient-to-r from-[#814ced] text-white to-[#3a1e70] hover:bg-gradient-to-r hover:from-[#3a1e70] hover:to-[#814ced] rounded-xl">Send Message</button>
+                    </div>
+                </motion.div>
+            </div>
+            <div className="text w-full md:w-[50%]">
+               <motion.div    
+               initial={{x:50,opacity:0}}
+               whileInView={{x:0,opacity:1,transition:{duration:2}}}
+               className="content flex flex-col gap-4 pt-4 md:pt-0">
+                    <div className="item flex items-center gap-4">
+                        <div className=" cursor-pointer  bg-gradient-to-r from-[#814ced] text-white to-[#3a1e70] hover:bg-gradient-to-r hover:from-[#3a1e70]to-[#814ced] h-10 w-10 rounded-full flex justify-center items-center">
+                           <BiPhoneCall className=" text-2xl text-white" />
+                        </div>
+                        <div className="text">
+                            <p className=" text-[16px]">Phone</p>
+                            <p className=" text-[20px]">0172826211</p>
                         </div>
                     </div>
-                    }
-                </div>
+                    <div className="item flex items-center gap-4">
+                        <div className=" cursor-pointer  bg-gradient-to-r from-[#814ced] text-white to-[#3a1e70] hover:bg-gradient-to-r hover:from-[#3a1e70]to-[#814ced] h-10 w-10 rounded-full flex justify-center items-center">
+                           <SiGmail className=" text-2xl text-white" />
+                        </div>
+                        <div className="text">
+                            <p className=" text-[16px]">Email</p>
+                            <p className=" text-[20px]">sheikhrakib883@gmail.com</p>
+                        </div>
+                    </div>
+                    <div className="item flex items-center gap-4">
+                        <div className=" cursor-pointer  bg-gradient-to-r from-[#814ced] text-white to-[#3a1e70] hover:bg-gradient-to-r hover:from-[#3a1e70]to-[#814ced] h-10 w-10 rounded-full flex justify-center items-center">
+                           <FaLocationDot className=" text-2xl text-white" />
+                        </div>
+                        <div className="text">
+                            <p className=" text-[16px]">Address</p>
+                            <p className=" text-[20px]">Banani Dhaka</p>
+                        </div>
+                    </div>
+                </motion.div>
             </div>
-        </section>
-    );
-};
+        </div>
+    </div>
+  )
+}
 
-export default Contact;
+export default Contact

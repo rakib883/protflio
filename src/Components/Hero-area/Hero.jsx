@@ -1,33 +1,26 @@
-import { Typewriter } from 'react-simple-typewriter'
+
 import logo from '../../../public/faby.png'
 import { FiFacebook } from "react-icons/fi";
 import { FiTwitter } from "react-icons/fi";
 import { FiLinkedin } from "react-icons/fi";
-import { LiaInvision } from "react-icons/lia";
-import { PiSketchLogo } from "react-icons/pi";
-import { TbBrandFigma } from "react-icons/tb";
-import Border from '../../All UI/Border';
+import { LuDownload } from "react-icons/lu";
+import { FaGithub } from "react-icons/fa";
+import { motion } from "framer-motion"
+
 const Hero = () => {
 
     return (
-        <section name="hero" className="main-area">
-            <div className="all-content grid lg:grid-cols-2 items-center  lg:gap-2">
-                <div className="text-area text-center lg:text-start">
-                    <div className="all-text lg:mt-[100px]  flex flex-col lg:py-[40px] mt-10 md:gap-5">
-                        <p className="text-[#C4CFDE] font-sans   text-[14px] tracking-[3px]">WELCOME TO MY WORLD</p>
-                        <h1 className="lg:text-[40px] text-[20px] text-[#FFFFFF] lg:leading-[70px]  font-bold">Hi, I'AM <span className="text-[#FF014F]">Rakib SHEIKH</span></h1>
-                         <p className="lg:text-[60px] md:text-[60px] text-[20px] text-[#FFFFFF] leading-[70px]  font-bold">   
-                           <Typewriter
-                                words={['developer', 'React js developer', "Next.js developer" ,'And hard problem solver']}
-                                loop={0}
-                                cursor
-                                cursorStyle='|'
-                                typeSpeed={70}
-                                deleteSpeed={50}
-                                delaySpeed={1000}
-                            />
-                         </p>
-                         <p className="text-[#C4CFDE] font-sans font-medium">
+        <section  className="main bg-gradient-to-r from-white via-white to-[#e6dafd]"> 
+            <div className="all-content md:flex justify-between gap-10 items-center py-4 mx-8  md:mx-20">
+                <motion.div
+                 initial={{x:-50,opacity:0}}
+                 whileInView={{x:0,opacity:1,transition:{duration:3}}}
+                className="text-area text-center lg:text-start w-full md:w-[50%]">
+                    <div className="all-text   flex flex-col  mt-10 gap-2 md:gap-5">
+                        <p className=" font-sans   text-[14px] tracking-[3px] bodyFont">WELCOME TO MY WORLD</p>
+                        <h1 className="lg:text-[40px] text-[20px] lg:leading-[70px]  font-bold bodyFont">Hi, I'AM <span className="text-[#2a1454]">Rakib SHEIKH</span></h1>
+
+                         <p className=" font-sans font-medium bodyFont">
                              As a React js developer. My expertise in front-end   development, 
                              enabling me to create user-friendly and responsive web applications using 
                              React and Next js its associated ecosystem. Beyond my technical proficiency, 
@@ -35,44 +28,36 @@ const Hero = () => {
                              within a team. I am passionate about continuous growth as a developer and eagerly seek opportunities to make meaningful contributions to projects and teams. 
                          </p>
                     </div>
-                    <div className="social-area grid lg:grid-cols-2  md:grid-cols-2 lg:mt-40 gap-10">
-                        <div className="find-with-me text-center  w-full">
-                            <div className="title">
-                                <p className="text-[14px] font-sans text-center md:text-start uppercase text-[#C4CFDE] tracking-[2px]">find with me</p>
-                                 <div className="main-area mt-4 flex justify-center md:justify-start items-center gap-4">
-                                    <a href="https://www.facebook.com/mdrakibshik.rakib" className="flex  justify-center p-4 items-center hover:bg-[#1A1C20] hover:-translate-y-1 duration-300 custom-shadaw w-[60px] h-[60px]">
-                                        <FiFacebook className="text-[#C4CFDE] hover:bg-[#1A1C20]   h-[30px] w-[30px] rounded cursor-pointer" />
+                    <div className="social-area flex items-center py-8  ">
+                       <div className=" w-full">
+                             <button className=" flex px-6 bodyFont hover:bg-[#844ef3] duration-300 hover:text-white  md:py-4 py-2  items-center gap-2 text-[#844ef3] border border-[#844ef3] rounded-full">Download CV <LuDownload className="text-xl" /> </button>
+                        </div>
+                        <div className=" text-center w-full">
+                            <div className="title bodyFont">
+                                 <div className="main-area flex justify-center md:justify-start items-center gap-4">
+                                   <a href="https://github.com/rakib883" className="flex border group border-[#8650f6] hover:bg-[#8650f6] rounded-full  justify-center  items-center   duration-300 custom-shadaw w-[40px] h-[40px]">
+                                        <FaGithub className=" text-[20px] rounded cursor-pointer text-[#8650f6]  group-hover:text-white" />
                                     </a>
-                                    <a href="" className="flex justify-center p-4 hover:bg-[#1A1C20] hover:-translate-y-1 duration-300  items-center custom-shadaw w-[60px] h-[60px]">
-                                        <FiTwitter className="text-[#C4CFDE] hover:bg-[#1A1C20]  h-[30px] w-[30px] rounded cursor-pointer" />
+                                    <a href="https://www.facebook.com/mdrakibshik.rakib" className="flex border group border-[#8650f6] hover:bg-[#8650f6] rounded-full  justify-center  items-center   duration-300 custom-shadaw w-[40px] h-[40px]">
+                                        <FiFacebook className=" text-[20px] rounded cursor-pointer text-[#8650f6]  group-hover:text-white" />
                                     </a>
-                                    <a href="https://www.linkedin.com/in/rakib883/" className="flex justify-center hover:bg-[#1A1C20] hover:-translate-y-1 p-4 duration-300 items-center custom-shadaw w-[60px] h-[60px]">
-                                        <FiLinkedin className="text-[#C4CFDE] h-[30px] w-[30px] rounded cursor-pointer" />
+                                    <a href="" className="flex group border border-[#8650f6] hover:bg-[#8650f6] justify-center   rounded-full  duration-300  items-center custom-shadaw w-[40px] h-[40px]">
+                                        <FiTwitter className="  text-[20px] group-hover:text-white   rounded cursor-pointer text-[#8650f6]" />
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/rakib883/" className="flex group border border-[#8650f6] hover:bg-[#8650f6] justify-center rounded-full   duration-300 items-center custom-shadaw w-[40px] h-[40px]">
+                                        <FiLinkedin className="  rounded cursor-pointer text-[20px] group-hover:text-white text-[#8650f6]" />
                                     </a>
                                  </div>
                             </div>
                         </div>
-                        <div className="my-skill w-full">
-                          <p className="text-[14px] font-sans uppercase text-[#C4CFDE] text-center md:text-start tracking-[2px]">best skill on</p>
-                          <div className="main-area mt-4 flex md:justify-start justify-center gap-4">
-                                    <div className="flex justify-center p-4 items-center hover:bg-[#1A1C20] hover:-translate-y-1 duration-300 custom-shadaw w-[60px] h-[60px]">
-                                        <LiaInvision  className="text-[#C4CFDE] hover:bg-[#1A1C20]   h-[30px] w-[30px] rounded cursor-pointer" />
-                                    </div>
-                                    <div className="flex justify-center p-4 hover:bg-[#1A1C20] hover:-translate-y-1 duration-300  items-center custom-shadaw w-[60px] h-[60px]">
-                                        <PiSketchLogo className="text-[#C4CFDE] hover:bg-[#1A1C20]  h-[30px] w-[30px] rounded cursor-pointer" />
-                                    </div>
-                                    <div className="flex justify-center hover:bg-[#1A1C20] hover:-translate-y-1 p-4 duration-300 items-center custom-shadaw w-[60px] h-[60px]">
-                                        <TbBrandFigma  className="text-[#C4CFDE] h-[30px] w-[30px] rounded cursor-pointer" />
-                                    </div>
-                                 </div>
-                        </div>
                     </div>
-                </div>
-                <div className="image-area md:justify-center mx-[10px] md:mx-[1px] mt-5  flex lg:justify-end">
-                    <img className="w-full h-full  object-contain" src={logo} alt="" />
-                </div>
+                </motion.div>
+               <div className="item w-full md:w-[50%]  flex justify-center items-center">
+                    <div className="image-area max-w-[400px] cursor-pointer bg-black rotate-2 hover:rotate-0 duration-300 rounded-2xl md:justify-center mx-[10px] md:mx-[1px] mt-5  flex lg:justify-end">
+                        <img className="w-full rounded-2xl h-full  object-contain" src={logo} alt="" />
+                    </div>
+               </div>
             </div>
-            <Border></Border>
         </section>
     );
 };

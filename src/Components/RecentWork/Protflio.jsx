@@ -1,6 +1,4 @@
 
-import Subtitle from '../../All UI/Subtitle';
-import Maintitle from '../../All UI/Maintitle';
 import firstImage from '../../assets/first.png' 
 import amajhon from '../../assets/amajhon.png'   
 import newbazar from '../../assets/nwebazar.png'   
@@ -11,8 +9,14 @@ import { MdOutlineVideocam } from "react-icons/md";
 import { BsBoxArrowUpRight } from "react-icons/bs";
 import ProtfulioLink from './ProtfulioLink';
 import Border from '../../All UI/Border';
+import Title from '../../All UI/Title';
+import { useState } from 'react';
 
 const Protflio = () => {
+//  tab area start
+const [tab,setTab]= useState(1)
+
+
     const protflio =[
         {
             pic :firstImage,
@@ -77,11 +81,24 @@ const Protflio = () => {
     ]
     return (
         <section name="Protflio" className="main">
-            <div className="sub-title">
-                <Subtitle className="uppercase text-center font-sans text-[14px]" title="visit my portfolio and keep your feedback visit"></Subtitle>
+            <div className="title mt-16 text-center">
+               <Title  title="My Recent Works" />
             </div>
-            <div className="main-title">
-                <Maintitle className="text-center uppercase font-sans" title="My Portfolio"></Maintitle>
+            <div className="tab-area my-8 bg-[#f6f3fc] max-w-lg mx-auto rounded-full">
+                <div className="content flex justify-between items-center ">
+                    <div onClick={()=>setTab(1)}  className={`item rounded-full py-3 px-8 cursor-pointer ${tab === 1 ? "bg-gradient-to-r from-[#7645d9] from-10% via-[#7645d9] via-40% to-[#321962] text-white" : "text-[#896bf8]"}`}>
+                        <p>All</p>
+                    </div>
+                    <div onClick={()=>setTab(2)}  className={`item rounded-full py-3 px-8 cursor-pointer ${tab === 2 ? "bg-gradient-to-r from-[#7645d9] from-10% via-[#7645d9] via-40% to-[#321962] text-white" : "text-[#896bf8]"}`}>
+                        <p>Web </p>
+                    </div>
+                    <div onClick={()=>setTab(3)}  className={`item rounded-full py-3 px-8 cursor-pointer ${tab === 3 ? "bg-gradient-to-r from-[#7645d9] from-10% via-[#7645d9] via-40% to-[#321962] text-white" : "text-[#896bf8]"}`}>
+                        <p>ARP</p>
+                    </div>
+                    <div onClick={()=>setTab(4)}  className={`item rounded-full py-3 px-8 cursor-pointer ${tab === 4 ? "bg-gradient-to-r from-[#7645d9] from-10% via-[#7645d9] via-40% to-[#321962] text-white" : "text-[#896bf8]"}`}>
+                        <p>UI/UX</p>
+                    </div>
+                </div>
             </div>
             <div className="main-content mt-8 mx-[10px]">
                 <div className="content grid grid-cols-1 md:lg:grid-cols-3 md:grid-cols-3 gap-5">
@@ -93,7 +110,6 @@ const Protflio = () => {
                    }
                 </div>
             </div>
-          <Border></Border>
         </section>
     );
 };

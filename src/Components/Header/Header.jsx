@@ -1,107 +1,80 @@
-
-import logo from '../../../public/faby.png'
-import Button from '../../All UI/Button';
-import { HiMiniBars3 } from "react-icons/hi2";
-import { RxCross1 } from "react-icons/rx";
-import { motion } from "framer-motion"
-import Border from '../../All UI/Border';
-import { Link,handleSetActive} from 'react-scroll';
-import { useState } from 'react';
+import { Link } from "react-router-dom";
+import { HiBars4 } from "react-icons/hi2";
+import { FaXmark } from "react-icons/fa6";
+import { useState } from "react";
 const Header = () => {
 const navitems = [
 
-    {name :"Home" , path : "hero" },
+    {name :"Home" , path : "/" },
     {name :"About" , path : "about" },
     {name :"Protflio" , path : "Protflio" },
     {name :"Contact" , path : "Contact" },
     
     
 ]
+ 
+   
+// menu trigger area start
 
-const [liveColor,setColor] = useState("red")
-
-
-const [showMobile , setShowMobile] = useState(false)
+const [menu,setMenu] = useState(false)
 
     return (
-        <section  className="bg-[#212428] z-50 sticky top-0 shadow-2xl">
-            <div className=" mx-[10px] md:mx-[60px] py-2  all-foter-content lg:h-[100px] flex justify-between items-center">
-                <div className="logo-area lg:h-[60px]  rounded-full overflow-hidden  md:h-[60px] md:w-[60px] h-[40px] w-[40px] border lg:w-[60px]">
-                    <img className="w-full h-full object-contain" src={logo} alt="" />
+       <div className="main bg-gradient-to-r sticky top-0 z-50 shadow-2xl from-white via-white to-[#e6dafd] py-2 md:py-6">
+          <div className="all-content relative flex justify-between items-center  md:mx-20  ">
+             <div className="icon flex items-center mx-8 md:mx-0 gap-2">
+                <Link to="/" className="logo text-4xl font-bold text-[#2a1454] ">R</Link>
+                <div className="gmail hover:text-[#8650f6] cursor-pointer duration-300">
+                    Sheikhrakib883@gmail.com
                 </div>
-                 <div className="menu-area  flex items-center">
-                    <div className="menu-items hidden gap-8  md:flex lg:flex">
-                        {
-                           navitems.map(items =>
-                             <div key={items.name} className="menu font-sans">
-                                 <Link
-                                 to={items.path} className="text-[#9BADB1] cursor-pointer text-[14px]  uppercase font-sans">{items.name}</Link>
-                             </div>
-                           ) 
-                        }
+             </div>
+              
+             <div className="menu ">
+                <div className="menu hidden md:block">
+                    <div className="menu flex gap-6 items-center">
+                        <div className="menu flex gap-6 ">
+                                {
+                                    navitems.map((item)=>
+                                    <Link to={item?.path} key={item?.name} className="main-area text-[16px] font-medium ">{item?.name}</Link>
+                                    ) 
+                                }
+                        </div>
+                        <div className="haireme">
+                            <button className="bg-gradient-to-r from-[#814ced] to-[#3a1e70] hover:bg-gradient-to-r hover:from-[#3a1e70] hover:to-[#814ced] px-6 py-2 rounded-full text-white transition-all duration-300">
+                                Haire Me
+                            </button>
+                        </div>
                     </div>
-                    <div  className="icon-area px-2 ml-10 lg:hidden md:hidden " onClick={() =>setShowMobile(!showMobile)}>
-                         <HiMiniBars3  className="text-[#FFFFFF] text-[24px] cursor-pointer"/>
-                    </div>
+                </div>
+                {/* mobile menu */}
+                 <div onClick={()=>setMenu(true)} className="items mx-8 md:mx-0 cursor-pointer md:hidden relative w-full">
+                   <div className="icon">
+                      <HiBars4 className=" text-2xl" />
+                   </div>
                  </div>
-                 <div className="button">
-                    <Button className="uppercase px-4 py-3 rounded-sm text-[13px]" title="Haire me"></Button>
-                 </div>
-            </div>
-            <div className="items">
-                {
-                    showMobile && <div className="all-mobile-menu bg-[#070808] lg:hidden md:hidden h-screen absolute top-0 w-full ">
-                          <motion.div  
-                          initial={{ y: -50 }}
-                          animate={{  y: 0 }}
-                          transition={{ duration: 0.5 }}
-                          className="main-content w-1/2 h-screen bg-[#191B1E] p-4">
-                                <div className="profile-area flex justify-between items-center mt-4">
-                                    <div className="profile ">
-                                        <img className="h-[60px] w-[60px]   border  rounded-full" src={logo} alt="" />
-                                    </div>
-                                     <div className="icon custom-shadaw p-4 rounded-full" onClick={() =>setShowMobile(!showMobile)}>
-                                        <RxCross1  className=" cursor-pointer text-[20px] text-[#FB024E] "/>
-                                     </div>
-                                </div>
-                                <div className="pragraph-area py-4">
-                                   <p className="text-[#C4CFDE] font-sans ">
-                                         This is Rakib sheikh web developper 
-                                     </p>
-                                </div>
-                              {/* mobile-menu-area- start */}
-                              <div className="mobile-menu">
-                                <Border></Border>
-                              </div>
-                              <div  className="mobile-menu flex flex-col gap-2 text-[#C0CAD9] cursor-pointer">
-                              {
-                               navitems.map(items =>
-                                <div  key={items.name} className="menu">
-                                 <Link
-                                   
-                                    onClick={() =>{setShowMobile(!showMobile),setColor("red")}}
-                                    activeClass="active" 
-                                    spy={true} 
-                                    smooth={true} 
-                                    offset={-80} 
-                                    duration={500} 
-                                    onSetActive={handleSetActive}
-                                    to={items.path} 
-                                   className={` ${liveColor ? " bg-orange-300" : ""}text-[#9BADB1] cursor-pointer text-[14px]  uppercase font-sans`}>{items.name}
-                                </Link>
-                             </div>
-                           ) 
-                        }
-                              </div>
-                              <div className="social-area">
-                                
-                              </div>
-                          </motion.div>
-                    </div>
-                   
-                } 
-            </div>
-        </section>
+             </div>
+                   <div className={`menu-item md:hidden  absolute ${menu === true ? "left-0 duration-300 " :"left-[100%] duration-300" } top-[-10px]  bg-gradient-to-r  shadow-2xl from-white via-white to-[#e6dafd] min-h-screen w-full`}>
+                      <div className="content ">
+                        <div className="bg-[#8650f6] ">
+                           <div className="content mx-8 py-2 flex justify-between items-center">
+                               <div className="logo mx-4">
+                                 <Link className=" text-3xl cursor-pointer">R</Link>
+                               </div>
+                               <div onClick={()=>setMenu(false)} className="cross cursor-pointer mx-4">
+                                 <FaXmark className=" text-3xl" />
+                               </div>
+                           </div>
+                        </div>
+                        <div className="menu flex flex-col gap-6 text-center ">
+                                    {
+                                        navitems.map((item)=>
+                                        <Link onClick={()=>setMenu(false)} to={item?.path} key={item?.name} className="main-area text-[16px] font-medium hover:bg-gray-300 py-3 ">{item?.name}</Link>
+                                        ) 
+                                    }
+                            </div>
+                       </div>
+                   </div>
+          </div>
+       </div>
     );
 };
 

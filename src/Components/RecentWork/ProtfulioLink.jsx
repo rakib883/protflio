@@ -3,7 +3,7 @@ const ProtfulioLink = (props) => {
     const {pic,topIcon,des,type,heart,arrow,live,repo  } = props.items;
    
     return (
-        <div className="custom-shadaw rounded-lg  cursor-pointer">
+        <div className="custom-shadaw rounded-lg  cursor-pointer bg-[#140c1c] bodyFont">
            <div className="image-area relative  m-6 overflow-hidden max-h-52">
                <a href={live}>
                  <img className="hover:scale-y-125 duration-300 cursor-pointer rounded-lg" src={pic} alt="" />
@@ -14,16 +14,16 @@ const ProtfulioLink = (props) => {
            </div>
            <div className="all-ses mx-6 mt-2">
              <div className="icon mt-5 flex items-center justify-between">
-                  <p className="text-[#CA0845]  uppercase">{type}</p>
+                  <p className="text-[#844ef2]  uppercase bodyFont">{type}</p>
                  <a href={repo}>
-                    <div className="code h-8 w-8 hover:bg-red-900 bg-red-700 flex justify-center items-center rounded-full">
+                    <div className="code h-8 w-8 hover:bg-[#844ef2] border-[#844ef2] border-[1px]  flex justify-center items-center rounded-full">
                         <FaCode className="text-white" />
                     </div>
                  </a>
               </div>
             
             <div className="title mt-2 group pb-4">
-                <h1 className="md:text-[24px] text-[16px] font-sans text-[#C4CFDE] relative overflow-hidden hover:text-[#FF014F] duration-300 ">{des} <span className="absolute bottom-[3px] translate-y-6 group-hover:translate-x-1 -translate-x-6 group-hover:-translate-y-1 duration-300 ml-2">{arrow}</span>  </h1>
+                <h1 className="md:text-[24px] text-[16px] font-sans text-[#C4CFDE] relative overflow-hidden hover:text-[#844ef2] duration-300 bodyFont ">{des} <span className="absolute bottom-[3px] translate-y-6 group-hover:translate-x-1 -translate-x-6 group-hover:-translate-y-1 duration-300 ml-2">{arrow}</span>  </h1>
             </div>
            </div>
         </div>
