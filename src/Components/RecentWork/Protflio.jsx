@@ -19,6 +19,7 @@ const [tab,setTab]= useState(1)
 
     const protflio =[
         {
+            id:1,
             pic :firstImage,
             live:"https://shop-z3aw.vercel.app/",
             repo:"https://github.com/rakib883/protflio.git",
@@ -29,6 +30,7 @@ const [tab,setTab]= useState(1)
             arrow : <MdArrowOutward />,
         },
         {
+            id:2,
             pic :amajhon,
             live:"https://newamajhon.vercel.app/",
             repo:"https://github.com/rakib883/newamajhon.git",
@@ -39,6 +41,7 @@ const [tab,setTab]= useState(1)
             arrow : <MdArrowOutward />,
         },
         {
+            id:3,
             pic :newbazar,
             live:"https://newbazar.vercel.app/",
             repo:"https://github.com/rakib883/bazar.git",
@@ -49,6 +52,7 @@ const [tab,setTab]= useState(1)
             arrow : <MdArrowOutward />,
         },
         {
+            id:4,
             pic :firstImage,
             live:"https://vercel.com/rakib883s-projects/shop-z3aw/9wTh6Hng9iELT8AkFaCe8Fkm9zn4",
             repo:"https://github.com/rakib883/protflio.git",
@@ -59,6 +63,7 @@ const [tab,setTab]= useState(1)
             arrow : <MdArrowOutward />,
         },
         {
+            id:5,
             pic :firstImage,
             live:"https://vercel.com/rakib883s-projects/shop-z3aw/9wTh6Hng9iELT8AkFaCe8Fkm9zn4",
             repo:"https://github.com/rakib883/protflio.git",
@@ -69,6 +74,7 @@ const [tab,setTab]= useState(1)
             arrow :<MdArrowOutward />,
         },
         {
+            id:6,
             pic :firstImage,
             live:"https://vercel.com/rakib883s-projects/shop-z3aw/9wTh6Hng9iELT8AkFaCe8Fkm9zn4",
             repo:"https://github.com/rakib883/protflio.git",
@@ -84,7 +90,7 @@ const [tab,setTab]= useState(1)
             <div className="title mt-16 text-center">
                <Title  title="My Recent Works" />
             </div>
-            <div className="tab-area my-8 bg-[#f6f3fc] max-w-lg mx-auto rounded-full">
+            <div className="tab-area my-8  bg-[#f6f3fc] max-w-lg md:mx-auto mx-10 rounded-full">
                 <div className="content flex justify-between items-center ">
                     <div onClick={()=>setTab(1)}  className={`item rounded-full py-3 px-8 cursor-pointer ${tab === 1 ? "bg-gradient-to-r from-[#7645d9] from-10% via-[#7645d9] via-40% to-[#321962] text-white" : "text-[#896bf8]"}`}>
                         <p>All</p>
@@ -104,7 +110,7 @@ const [tab,setTab]= useState(1)
                 <div className="content grid grid-cols-1 md:lg:grid-cols-3 md:grid-cols-3 gap-5">
                    {
                     protflio.map(items =><ProtfulioLink
-                      key = {items.icon}
+                      key = {items?.id}
                       items = {items}
                     ></ProtfulioLink>)
                    }

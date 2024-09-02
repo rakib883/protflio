@@ -23,7 +23,7 @@ const [menu,setMenu] = useState(false)
           <div className="all-content relative flex justify-between items-center  md:mx-20  ">
              <div className="icon flex items-center mx-8 md:mx-0 gap-2">
                 <Link to="/" className="logo text-4xl font-bold text-[#2a1454] ">R</Link>
-                <div className="gmail hover:text-[#8650f6] cursor-pointer duration-300">
+                <div className="gmail hover:text-[#8650f6] cursor-pointer duration-300 hidden md:block" >
                     Sheikhrakib883@gmail.com
                 </div>
              </div>

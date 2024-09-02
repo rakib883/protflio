@@ -28,11 +28,11 @@ const Hero = () => {
                              within a team. I am passionate about continuous growth as a developer and eagerly seek opportunities to make meaningful contributions to projects and teams. 
                          </p>
                     </div>
-                    <div className="social-area flex items-center py-8  ">
-                       <div className=" w-full">
+                    <div className="social-area  md:flex items-center py-8  ">
+                       <div className=" w-full flex justify-center items-center">
                              <button className=" flex px-6 bodyFont hover:bg-[#844ef3] duration-300 hover:text-white  md:py-4 py-2  items-center gap-2 text-[#844ef3] border border-[#844ef3] rounded-full">Download CV <LuDownload className="text-xl" /> </button>
                         </div>
-                        <div className=" text-center w-full">
+                        <div className=" mt-4 md:mt-0 text-center w-full">
                             <div className="title bodyFont">
                                  <div className="main-area flex justify-center md:justify-start items-center gap-4">
                                    <a href="https://github.com/rakib883" className="flex border group border-[#8650f6] hover:bg-[#8650f6] rounded-full  justify-center  items-center   duration-300 custom-shadaw w-[40px] h-[40px]">
