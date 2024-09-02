@@ -11,11 +11,11 @@ const Hero = () => {
 
     return (
         <section  className="main bg-gradient-to-r from-white via-white to-[#e6dafd]"> 
-            <div className="all-content md:flex justify-between gap-10 items-center py-4 mx-8  md:mx-20">
+            <div className="all-content md:flex justify-between gap-10 items-center py-14 mx-8  md:mx-20">
                 <motion.div
                  initial={{x:-50,opacity:0}}
                  whileInView={{x:0,opacity:1,transition:{duration:3}}}
-                className="text-area text-center lg:text-start w-full md:w-[50%]">
+                className="text-area text-center py-4 lg:text-start w-full md:w-[50%]">
                     <div className="all-text   flex flex-col  mt-10 gap-2 md:gap-5">
                         <p className=" font-sans   text-[14px] tracking-[3px] bodyFont">WELCOME TO MY WORLD</p>
                         <h1 className="lg:text-[40px] text-[20px] lg:leading-[70px]  font-bold bodyFont">Hi, I'AM <span className="text-[#2a1454]">Rakib SHEIKH</span></h1>
