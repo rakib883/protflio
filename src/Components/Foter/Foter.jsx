@@ -6,7 +6,7 @@ const Foter = () => {
            <div className="title">
              <h1 className=" text-center text-white text-[48px] bodyFont">R</h1>
            </div>
-           <div className="item text-white flex justify-center gap-8 text-center mx-auto max-w-2xl">
+           <div className="item text-white flex justify-center gap-4 md:gap-8 text-center mx-auto max-w-2xl">
               <div className="main cursor-pointer">Services.</div>
               <div className="main cursor-pointer">Work.</div>
               <div className="main cursor-pointer">Skill.</div>
