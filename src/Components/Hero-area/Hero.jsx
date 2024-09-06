@@ -18,7 +18,7 @@ const Hero = () => {
                 className="text-area text-center py-4 lg:text-start w-full md:w-[50%]">
                     <div className="all-text   flex flex-col  mt-10 gap-2 md:gap-5">
                         <p className=" font-sans   text-[14px] tracking-[3px] bodyFont">WELCOME TO MY WORLD</p>
-                        <h1 className="lg:text-[40px] text-[20px] lg:leading-[70px]  font-bold bodyFont">Hi, I'AM <span className="text-[#2a1454]">Rakib SHEIKH</span></h1>
+                        <h1 className="lg:text-[40px] text-[20px] lg:leading-[70px]  font-bold bodyFont">Hi, I'am <span className="text-[#2a1454]">Rakib Sheikh</span></h1>
 
                          <p className=" font-sans font-medium bodyFont">
                              As a React js developer. My expertise in front-end   development, 
@@ -53,7 +53,7 @@ const Hero = () => {
                     </div>
                 </motion.div>
                <div className="item w-full md:w-[50%]  flex justify-center items-center">
-                    <div className="image-area max-w-[400px] cursor-pointer bg-black rotate-2 hover:rotate-0 duration-300 rounded-2xl md:justify-center mx-[10px] md:mx-[1px] mt-5  flex lg:justify-end">
+                    <div className="image-area max-w-[400px] cursor-pointer bg-black  hover:rotate-2 duration-300 rounded-2xl md:justify-center mx-[10px] md:mx-[1px] mt-5  flex lg:justify-end">
                         <img className="w-full rounded-2xl h-full  object-contain" src={logo} alt="" />
                     </div>
                </div>

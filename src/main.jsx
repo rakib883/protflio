@@ -7,10 +7,9 @@ import {
 } from "react-router-dom";
 import Home from './Page/Home.jsx';
 import App from './App.jsx';
-import Error from './Components/Error/Error.jsx';
 import Contact from './Components/Contact/Contact.jsx';
 import Protflio from './Components/RecentWork/Protflio.jsx';
-
+import ErrorPage from './Page/Error.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,7 +29,7 @@ const router = createBrowserRouter([
       },
       {
         path : "*",
-        element :<Error></Error> 
+        element :<ErrorPage/>
       },
       
     ]
