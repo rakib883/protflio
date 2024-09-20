@@ -1,6 +1,7 @@
 
 import firstImage from '../../assets/first.png' 
-import amajhon from '../../assets/amajhon.png'   
+import amajhon from '../../assets/amajhon.png'
+import cisco from '../../assets/cisco.png'      
 import newbazar from '../../assets/nwebazar.png'   
 import { RiWindowsLine } from "react-icons/ri";   
 import { CiHeart } from "react-icons/ci";
@@ -20,6 +21,17 @@ const [tab,setTab]= useState(1)
     const protflio =[
         {
             id:1,
+            pic :cisco,
+            live:"https://cisco-client.vercel.app/",
+            repo:"https://github.com/rakib883/cisco.git",
+            topIcon : <RiWindowsLine className="w-5 h-5 font-bold text-[#3B3A47]" />,
+            type : "Cisco.com",
+            heart : <CiHeart className="text-[]"/>,
+            des :"E-Comarch web templete using React js",
+            arrow : <MdArrowOutward />,
+        },
+        {
+            id:2,
             pic :firstImage,
             live:"https://shop-z3aw.vercel.app/",
             repo:"https://github.com/rakib883/protflio.git",
@@ -30,7 +42,7 @@ const [tab,setTab]= useState(1)
             arrow : <MdArrowOutward />,
         },
         {
-            id:2,
+            id:3,
             pic :amajhon,
             live:"https://newamajhon.vercel.app/",
             repo:"https://github.com/rakib883/newamajhon.git",
@@ -41,7 +53,7 @@ const [tab,setTab]= useState(1)
             arrow : <MdArrowOutward />,
         },
         {
-            id:3,
+            id:4,
             pic :newbazar,
             live:"https://newbazar.vercel.app/",
             repo:"https://github.com/rakib883/bazar.git",
@@ -52,7 +64,7 @@ const [tab,setTab]= useState(1)
             arrow : <MdArrowOutward />,
         },
         {
-            id:4,
+            id:5,
             pic :firstImage,
             live:"https://vercel.com/rakib883s-projects/shop-z3aw/9wTh6Hng9iELT8AkFaCe8Fkm9zn4",
             repo:"https://github.com/rakib883/protflio.git",
@@ -63,7 +75,7 @@ const [tab,setTab]= useState(1)
             arrow : <MdArrowOutward />,
         },
         {
-            id:5,
+            id:6,
             pic :firstImage,
             live:"https://vercel.com/rakib883s-projects/shop-z3aw/9wTh6Hng9iELT8AkFaCe8Fkm9zn4",
             repo:"https://github.com/rakib883/protflio.git",
@@ -74,7 +86,7 @@ const [tab,setTab]= useState(1)
             arrow :<MdArrowOutward />,
         },
         {
-            id:6,
+            id:7,
             pic :firstImage,
             live:"https://vercel.com/rakib883s-projects/shop-z3aw/9wTh6Hng9iELT8AkFaCe8Fkm9zn4",
             repo:"https://github.com/rakib883/protflio.git",
