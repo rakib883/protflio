@@ -74,28 +74,6 @@ const [tab,setTab]= useState(1)
             des :"work out web site design and development.",
             arrow : <MdArrowOutward />,
         },
-        {
-            id:6,
-            pic :firstImage,
-            live:"https://vercel.com/rakib883s-projects/shop-z3aw/9wTh6Hng9iELT8AkFaCe8Fkm9zn4",
-            repo:"https://github.com/rakib883/protflio.git",
-            topIcon : <RiWindowsLine className="w-5 h-5 text-[#3B3A47]"/>,
-            type : "Gallery",
-            heart : <CiHeart />,
-            des :"mobile app aplaction landing design and development",
-            arrow :<MdArrowOutward />,
-        },
-        {
-            id:7,
-            pic :firstImage,
-            live:"https://vercel.com/rakib883s-projects/shop-z3aw/9wTh6Hng9iELT8AkFaCe8Fkm9zn4",
-            repo:"https://github.com/rakib883/protflio.git",
-            topIcon : <RiWindowsLine className="w-5 h-5 text-[#3B3A47]"/>,
-            type : "Stardant",
-            heart : <CiHeart />,
-            des :"restuenrt app  design and and mobile applaction",
-            arrow : <MdArrowOutward />,
-        },
     ]
     return (
         <section name="Protflio" className="main">
