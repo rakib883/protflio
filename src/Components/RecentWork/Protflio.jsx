@@ -41,28 +41,7 @@ const [tab,setTab]= useState(1)
             des :"E-Comarch web templete using React js",
             arrow : <MdArrowOutward />,
         },
-        {
-            id:3,
-            pic :amajhon,
-            live:"https://newamajhon.vercel.app/",
-            repo:"https://github.com/rakib883/newamajhon.git",
-            topIcon :<MdOutlineVideocam className="w-5 h-5 text-[#3B3A47]"/>,
-            type : "BuyNow.com",
-            heart : <CiHeart />,
-            des :"E-Comarch web templete Using Next.js",
-            arrow : <MdArrowOutward />,
-        },
-        {
-            id:4,
-            pic :newbazar,
-            live:"https://newbazar.vercel.app/",
-            repo:"https://github.com/rakib883/bazar.git",
-            topIcon : <BsBoxArrowUpRight className="w-5 h-5 text-[#3B3A47]"/>,
-            type : "Bazar",
-            heart : <CiHeart />,
-            des :"E-Comarch web templete ReduxTolkit state Management",
-            arrow : <MdArrowOutward />,
-        },
+       
         
     ]
     return (
