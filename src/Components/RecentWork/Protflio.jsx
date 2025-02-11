@@ -1,7 +1,8 @@
 
 import firstImage from '../../assets/first.png' 
 import amajhon from '../../assets/amajhon.png'
-import cisco from '../../assets/cisco.png'      
+import cisco from '../../assets/cisco.png'    
+import dashbord from '../../assets/third.jpg'    
 import newbazar from '../../assets/nwebazar.png'   
 import { RiWindowsLine } from "react-icons/ri";   
 import { CiHeart } from "react-icons/ci";
@@ -41,7 +42,17 @@ const [tab,setTab]= useState(1)
             des :"E-Comarch web templete using React js",
             arrow : <MdArrowOutward />,
         },
-       
+        {
+            id:3,
+            pic :dashbord,
+            live:"https://dashbord-dun.vercel.app/",
+            repo:"https://github.com/rakib883/dashbord.git",
+            topIcon : <RiWindowsLine className="w-5 h-5 font-bold text-[#3B3A47]" />,
+            type : "Dashbord",
+            heart : <CiHeart className="text-[]"/>,
+            des :"E-Comarch web Dashbord",
+            arrow : <MdArrowOutward />,
+        },
         
     ]
     return (
